@@ -1,0 +1,41 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap";
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, Nunito, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-maano-primary hover:bg-maano-primary-dark text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-maano-soft-gray hover:bg-gray-200 text-maano-deep-blue font-medium py-3 px-6 rounded-xl transition-all duration-200 border border-gray-300;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border border-gray-100;
+  }
+
+  .input-field {
+    @apply block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-maano-primary focus:border-transparent transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-maano-deep-blue to-maano-primary bg-clip-text text-transparent;
+  }
+}
+/*# sourceMappingURL=frontend.9f367d21.css.map */
