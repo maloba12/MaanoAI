@@ -1,11 +1,12 @@
 const { Pool } = require('pg');
-const dotenv = require('dotenv');
+require('dotenv').config();
 
-dotenv.config();
-
-// Create a connection pool for PostgreSQL
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgres://localhost:5432/maano_ai',
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'maano_ai',
+  password: process.env.DB_PASS,  // Note: Using DB_PASS to match your .env
+  port: process.env.DB_PORT || 5432,
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
   max: 20,
   idleTimeoutMillis: 30000,

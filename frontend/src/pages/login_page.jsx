@@ -91,10 +91,11 @@ const LoginPage = () => {
           {/* Logo and Header */}
           <div className="text-center mb-8">
             <div className="flex justify-center items-center mb-4">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center"
-                   style={{ backgroundColor: '#4F46E5' }}>
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Maano AI Logo" 
+                className="h-16 w-auto" 
+              />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Maano AI</h1>
             <p className="text-gray-600 text-sm">

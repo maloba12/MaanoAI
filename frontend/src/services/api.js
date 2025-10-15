@@ -2,11 +2,13 @@ import axios from 'axios';
 
 // Create axios instance with default configuration
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: '', // Proxy will handle the /api prefix
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
+    'Accept': 'application/json',
   },
+  withCredentials: true,
 });
 
 // Request interceptor to add auth token
